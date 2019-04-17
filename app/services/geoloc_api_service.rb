@@ -5,7 +5,7 @@ class GeolocApiService
 
     full_url = URI::HTTP.build(:host => 'eu1.locationiq.com',
     :path => '/v1/search.php',
-    :query => "key=84a08a09c6edcb&q=#{user_string}&format=json")
+    :query => "key=#{ENV['LOCATIONIQ_API_KEY']}=#{user_string}&format=json")
 
     puts "Doing request to: #{full_url.to_s}"
 
