@@ -1,6 +1,4 @@
 require 'net/http'
-# require "json"
-
 class GeolocApiService
 
   def request_to_locationiq(user_string)
@@ -11,21 +9,21 @@ class GeolocApiService
 
     puts "Doing request to: #{full_url.to_s}"
 
-    request = Net::HTTP.get_response(full_url)
-      if request.code == "404"
-        # raise NotFoundException
-        result = "No location or places were found for the given input"
-      elsif request.code == "400"
-        result = "Required parameters are missing, or invalid"
-      elsif request.code == "429"
-        result = "Request exceeded the per-second rate-limits set on your account"
-      else
-        parser = JSON.parse(request.body)
-        location = {lat: parser[0]['lat'], lon: parser[0]['lon']}
-        result = location.to_json
-        # result = "lattitude = #{parser[0]['lat']} - longitude = #{parser[0]['lon']}"
+    response = Net::HTTP.get_response(full_url)
+      case response.code
+        when "404"
+          result = 1
+        when "400"
+          result = 2
+        when "429"
+          result = 3
+        when "500"
+          result = 4
+        else
+          parser = JSON.parse(response.body)
+          location = {lat: parser[0]['lat'], lon: parser[0]['lon']}
+          result = location.to_json
       end
-    # p result
   end
 end
 
