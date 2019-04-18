@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This app has been created with a Rails framework in which a devise and pundit has been added in order to secure the endpoint .
+This app has been created with a Rails framework in which a devise and pundit have been added in order to secure the request endpoint .
 
 A model and DB have also been created for the location so the program could in a future version handle saving the requests created and handle multiple users with different login credentials.
 
