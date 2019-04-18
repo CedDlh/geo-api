@@ -19,7 +19,7 @@ To generate a user automatically : Run the command rails db:seed on start.
 To retrieve the unique user Token associated  : run Rails c and User.last.
 
 Attached PIC
-![image](https://drive.google.com/open?id=1IA04ghdHFAzqlhTdMK3QZuNmfy80n3M6)
+![image](https://drive.google.com/uc?export=view&id=1IA04ghdHFAzqlhTdMK3QZuNmfy80n3M6)
 
 Before making a HTTP request via Postman, the following headers need to be added :
 content-Type		application/json
