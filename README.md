@@ -21,9 +21,9 @@ To retrieve the unique user Token associated  : run ``Rails c`` and ``User.last`
 ![image](https://drive.google.com/uc?export=view&id=1IA04ghdHFAzqlhTdMK3QZuNmfy80n3M6)
 
 Before making a HTTP request via Postman, the following headers need to be added :
-content-Type		application/json
-X-User-Email		me@me.com
-X-User-Token		"Token Generated Above"
+- content-Type	=> 	application/json
+- X-User-Email =>		me@me.com
+- X-User-Token =>		"Token Generated Above"
 
 >Example : 
 ![image](https://drive.google.com/uc?export=view&id=1j3QK8H65w6JkNAR8adhX001LuBrC4MDt)
@@ -31,7 +31,7 @@ X-User-Token		"Token Generated Above"
 ## Test request
 
 After launching the server with ``rails s``, you can use any of the 5 test emails below. 
-They will either return as a result the appriopriate lat/long in a JSON format or raise an error when appropriate :
+They will either return as a result the correct lat/long in a JSON format or raise an error when appropriate :
 - http://localhost:3000/api/v1/locations?address=notre-dame-de-paris
 - http://localhost:3000/api/v1/locations?address=checkpoint-charlie
 - http://localhost:3000/api/v1/locations?address=statue-of-liberty
