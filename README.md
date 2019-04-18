@@ -6,11 +6,9 @@ This app has been created with a Rails framework in which a devise and pundit ha
 
 A model and DB have also been created for the location so the program could in a future version handle saving the requests created and handle multiple users with different login credentials.
 
-The API controller is available here : 
-Geo-api/app/controllers/api/v1/locations_controller.rb
+#### The API controller is available: [here](app/controllers/api/v1/locations_controller.rb)
 
-The service requesting and returning the coordinates here:
-Geo-api/app/services/geoloc_api_service.rb
+#### The service requesting and returning the coordinates: [here](app/services/geoloc_api_service.rb)
 
 ## Setup
 
@@ -32,9 +30,13 @@ X-User-Token		"Token Generated Above"
 
 ## Test request
 
-You will find below 5 test emails with the result or error they should raise if appropriate :
-
-
+After launching the server with ``rails s``, you can use any of the 5 test emails below. 
+They will either return as a result the appriopriate lat/long in a JSON format or raise an error when appropriate :
+- http://localhost:3000/api/v1/locations?address=notre-dame-de-paris
+- http://localhost:3000/api/v1/locations?address=checkpoint-charlie
+- http://localhost:3000/api/v1/locations?address=statue-of-liberty
+- http://localhost:3000/api/v1/locations?address=
+- http://localhost:3000/api/v1/locations?address=zzzzzzzzzzzzzzzzzz
 
 If an error arise from the 3rd party provider, this program will handle it by raise a 500 server error asking to retry later in order to not break the total application.
 
