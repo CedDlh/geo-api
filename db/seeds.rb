@@ -8,3 +8,4 @@
 
 
 
+User.create(email: "me@me.com", password: "123456")

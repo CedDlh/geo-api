@@ -1,7 +1,9 @@
 require 'test_helper'
 
 class LocationPolicyTest < ActiveSupport::TestCase
-  def test_scope
+  def test_resolve
+   scope = scope.all
+   assert true if scope.all
   end
 
   def test_show
