@@ -15,9 +15,9 @@ Geo-api/app/services/geoloc_api_service.rb
 ## Setup
 
 This API endpoint is not publicly available and a user needs to be logged in order to make a request.
-In order to install the relevant gems execute a "bundle install" on start.
-To generate a user automatically : Run the command rails db:seed on start.
-To retrieve the unique user Token associated  : run Rails c and User.last.
+To install the relevant gems execute a ``bundle install`` on start.
+To generate a user automatically : Run the command ``rails db:seed``.
+To retrieve the unique user Token associated  : run ``Rails c`` and ``User.last``.
 
 >Example : 
 ![image](https://drive.google.com/uc?export=view&id=1IA04ghdHFAzqlhTdMK3QZuNmfy80n3M6)
